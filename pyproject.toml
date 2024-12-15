@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "psychlabs"
+version = "0.1.0"
+description = ""
+authors = ["Rohit Thakur","Harshit Sharma"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.40.2"
+fastapi = "^0.115.5"
+ruff = "^0.8.3"
+pre-commit = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+package-mode = false
