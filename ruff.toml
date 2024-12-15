@@ -1,0 +1,78 @@
+# ruff.toml
+
+# Specify the target Python version
+target-version = "py311"
+
+# Set the line length for the linter
+line-length = 100
+
+# Exclude files or directories from linting (currently empty)
+exclude = []
+
+# Linting rules: specify which types of issues to select
+[lint]
+select = [
+    "F",    # Flake8-style errors
+    "E",    # PEP8 errors
+    "W",    # Warnings
+    "I",    # Informational messages
+    "N",    # NumPy-specific issues
+    "UP",   # Undefined
+    "S",    # Stylistic issues
+    "PL",   # PyLint-style issues
+    "BLE",  # Black-style issues
+    "B",    # Bug-related issues
+    "A",    # Assertion-related issues
+    "C4",   # Code quality issues
+    "ICN",  # Import-related issues
+    "SLF",  # Slow performance issues
+    "SIM",  # Simplification issues
+    "ERA",  # Error handling issues
+    "RUF",  # Ruff-specific issues
+    "T10",  # Type-related issues (error 10)
+    "T20",  # Type-related issues (warning 20)
+    "PT",   # Pylint-related issues
+    "ANN",  # Annotations-related issues
+    "ISC",  # Imports sorting-related issues
+    "G",    # General issues
+    "PIE",  # Performance improvement suggestions
+    "ARG",  # Argument-related issues
+    "NPY",  # Numpy-specific issues
+    "PERF", # Performance-related issues
+    "FURB", # Future-related issues
+    "C90",  # Code 90-specific issues
+    "D",    # Docstring-related issues
+]
+
+# Linting rules to ignore (those will not trigger warnings or errors)
+ignore = [
+    "B024",  # Disable warning for specific behavior
+    "RUF015",  # Ruff-specific error to ignore
+    "S311",  # Specific style warning to ignore
+    "ISC001", # Incompatible with formatter (ignore)
+    "D100",   # Docstring-related issues
+    "D101",   # Docstring-related issues
+    "D104",   # Docstring-related issues
+    "D105",   # Docstring-related issues
+    "D107",   # Docstring-related issues
+    "D205",   # Docstring-related issues
+    "D207",   # Docstring-related issues
+]
+
+# Optional: You can define specific per-file ignores for certain files
+[lint.per-file-ignores]
+
+# Optional: Pylint-specific configuration (optional, remove if unnecessary)
+[lint.pylint]
+max-args = 10
+
+# Optional: isort specific settings (remove if not needed)
+[lint.isort]
+
+# Optional: flake8-pytest-style specific settings (remove if not needed)
+[lint.flake8-pytest-style]
+parametrize-values-type = "tuple"
+
+# Optional: pydocstyle configuration (remove if not needed)
+[lint.pydocstyle]
+convention = "google"
